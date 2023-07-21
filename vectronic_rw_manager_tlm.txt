@@ -1,0 +1,37 @@
+TELEMETRY CFS REACTION_WHEEL_MANAGER_HK BIG_ENDIAN "ReactionWheel Manager Housekeeping telemetry"
+    #               NAME                  BITS TYPE ID      DESCRIPTION
+    # TlmHeader
+    ## Primary Header
+    APPEND_ID_ITEM  STREAM_ID             16   UINT 0x08CA  "Stream ID"
+    FORMAT_STRING   "0x%04X"
+    APPEND_ITEM     SEQUENCE              16   UINT         "Packet Sequence"
+    FORMAT_STRING   "0x%04X"
+    APPEND_ITEM     PKT_LEN               16   UINT         "Length of the packet"
+    ## Secondary Header
+    APPEND_ITEM     SECONDS               32   UINT         "Seconds"
+    UNITS           Seconds               sec
+    APPEND_ITEM     SUBSECS               16   UINT         "Milliseconds"
+    UNITS           Milliseconds          ms
+    ## Pad to avoid compiler padding if payload requires 64 bit alignment
+    APPEND_ITEM     SPARE2ALIGN           32   UINT         "Spares"
+    # Payload
+    APPEND_ITEM
+
+TELEMETRY CFS REACTION_WHEEL_MANAGER_TLM BIG_ENDIAN "ReactionWheel Manager Housekeeping telemetry"
+    #               NAME                  BITS TYPE ID      DESCRIPTION
+    # TlmHeader
+    ## Primary Header
+    APPEND_ID_ITEM  STREAM_ID             16   UINT 0x08CA  "Stream ID"
+    FORMAT_STRING   "0x%04X"
+    APPEND_ITEM     SEQUENCE              16   UINT         "Packet Sequence"
+    FORMAT_STRING   "0x%04X"
+    APPEND_ITEM     PKT_LEN               16   UINT         "Length of the packet"
+    ## Secondary Header
+    APPEND_ITEM     SECONDS               32   UINT         "Seconds"
+    UNITS           Seconds               sec
+    APPEND_ITEM     SUBSECS               16   UINT         "Milliseconds"
+    UNITS           Milliseconds          ms
+    ## Pad to avoid compiler padding if payload requires 64 bit alignment
+    APPEND_ITEM     SPARE2ALIGN           32   UINT         "Spares"
+    # Payload
+    APPEND_ITEM

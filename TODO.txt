@@ -1,0 +1,34 @@
+
+Get card access with staff card
+
+
+make SIMULATION=native ENABLE_UNIT_TESTS=true OMIT_DEPRECATED=true BUILDTYPE=release prep
+
+cFS-SMC/build/native/default_cpu1/apps/hw_lib/unit-test
+
+Unit testing coverage -> unit-test-coverage-reusable under workflows -> start at line 109
+
+write descriptions on PRs
+
+
+ad7173 changes:
+    250 line -> add syslog msg  
+    260 -> add disable status override only when status no error
+
+Reaction Wheel - motor invert function
+
+
+ok IDs:
+
+    0x330 - request (loopback on)
+    0x730
+    0x731
+    0x732
+    0x733
+
+
+// distrobox 
+
+//something about a tag
+distrobox create -i cfs_base_image:latest
+distrobox enter cfs_base

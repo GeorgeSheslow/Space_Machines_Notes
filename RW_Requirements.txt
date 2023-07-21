@@ -1,0 +1,58 @@
+
+ICD: https://www.dropbox.com/home/Space%20Machines/Townhall/Product%20%26%20Engineering/Engineering/Vendors/Vectronic/VAS-VRWD4?preview=TD-VAS-VRWD4MC-NA-ICD17.pdf
+
+CAN 2.0
+
+Standard frame format, 11 Bit Arbitration 
+
+Command and response from VRW, fixed data_length 8 byte
+
+
+Modes:
+    - Speed 
+    - Current
+    - Torque  
+
+max_torque:
+    - used for speed_control mode
+    - torque limitation not active in current or torque mode
+
+speed:
+    - automatically activates speed control loop
+
+current:
+    - automatically activates current mode
+    - automatically disables speed and/or torque control loops
+
+net_torque:
+    - automatically activates torque control mode
+    - disables speed and current modes
+
+
+Host command frequency should not be higher than 10Hz
+
+
+Arbitration Field (11 bit Identifier)
+
+    Bus Occupancy (1 bit)
+    Frame Type (2 bits)
+    Node Address (5 bits)
+    Bus ID (1 bit)
+    Frame Information (2 bits)
+
+
+Control Field  ~ always (0x08) - Non issue
+
+    RTR (1 bit) ~ always zero
+    IDE (1 bit) ~ always zero
+    R0 (1 bit) ~ always zero
+    DLC (4 bits) ~ always '1000'
+
+
+TODO:
+
+Finish reaction_wheel_commands
+    - filter function
+    - telemetry
+
+Write Stubs and unit tests for reaction wheel commands

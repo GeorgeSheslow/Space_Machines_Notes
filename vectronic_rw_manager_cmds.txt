@@ -1,0 +1,87 @@
+COMMAND CFS REACTION_WHEEL_MANAGER_NOOP BIG_ENDIAN "ReactionWheel Manager NOOP Command"
+    # CMD Primary Header
+    APPEND_ID_PARAMETER    STREAM_ID   16   UINT   0x18C9      0x18C9      0x18C9      "Packet Identification"
+        FORMAT_STRING "0x%04X"
+    APPEND_PARAMETER       SEQUENCE    16   UINT   MIN_UINT16  MAX_UINT16  0xC000      "Packet Sequence"
+        FORMAT_STRING "0x%04X"
+    APPEND_PARAMETER       PKT_LEN     16   UINT   0x0001      0x0001      0x0001      "Packet length"
+    # CMD Secondary Header
+    APPEND_PARAMETER       CMD_ID       8   UINT   0           0           0           "Function Code"
+    APPEND_PARAMETER       CHECKSUM     8   UINT   MIN_UINT8   MAX_UINT8   MIN_UINT8   "Checksum"
+
+COMMAND CFS REACTION_WHEEL_MANAGER_RESET BIG_ENDIAN "ReactionWheel Manager RESET Counters Command"
+    # CMD Primary Header
+    APPEND_ID_PARAMETER    STREAM_ID   16   UINT   0x18C9      0x18C9      0x18C9      "Packet Identification"
+        FORMAT_STRING "0x%04X"
+    APPEND_PARAMETER       SEQUENCE    16   UINT   MIN_UINT16  MAX_UINT16  0xC000      "Packet Sequence"
+        FORMAT_STRING "0x%04X"
+    APPEND_PARAMETER       PKT_LEN     16   UINT   0x0001      0x0001      0x0001      "Packet length"
+    # CMD Secondary Header
+    APPEND_PARAMETER       CMD_ID       8   UINT   1           1           1           "Function Code"
+    APPEND_PARAMETER       CHECKSUM     8   UINT   MIN_UINT8   MAX_UINT8   MIN_UINT8   "Checksum"
+
+COMMAND CFS REACTION_WHEEL_MANAGER_SEND_HK BIG_ENDIAN "ReactionWheel Manager SEND HK TELEMETRY Command"
+    # CMD Primary Header
+    APPEND_ID_PARAMETER    STREAM_ID   16   UINT   0x18C9      0x18C9      0x18C9      "Packet Identification"
+        FORMAT_STRING "0x%04X"
+    APPEND_PARAMETER       SEQUENCE    16   UINT   MIN_UINT16  MAX_UINT16  0xC000      "Packet Sequence"
+        FORMAT_STRING "0x%04X"
+    APPEND_PARAMETER       PKT_LEN     16   UINT   0x0001      0x0001      0x0001      "Packet length"
+    # CMD Secondary Header
+    APPEND_PARAMETER       CMD_ID       8   UINT   2           2           2           "Function Code"
+    APPEND_PARAMETER       CHECKSUM     8   UINT   MIN_UINT8   MAX_UINT8   MIN_UINT8   "Checksum"
+
+COMMAND CFS REACTION_WHEEL_MANAGER_CONTROL_REQUEST_TORQUE BIG_ENDIAN "ReactionWheel Manager SEND HK TELEMETRY Command"
+    # CMD Primary Header
+    APPEND_ID_PARAMETER    STREAM_ID   16   UINT   0x18C9      0x18C9      0x18C9      "Packet Identification"
+        FORMAT_STRING "0x%04X"
+    APPEND_PARAMETER       SEQUENCE    16   UINT   MIN_UINT16  MAX_UINT16  0xC000      "Packet Sequence"
+        FORMAT_STRING "0x%04X"
+    APPEND_PARAMETER       PKT_LEN     16   UINT   0x0001      0x0001      0x0001      "Packet length"
+    # CMD Secondary Header
+    APPEND_PARAMETER       CMD_ID       8   UINT   3           3           3           "Function Code"
+    APPEND_PARAMETER       CHECKSUM     8   UINT   MIN_UINT8   MAX_UINT8   MIN_UINT8   "Checksum"
+
+COMMAND CFS REACTION_WHEEL_MANAGER_CONTROL_REQUEST_CURRENT BIG_ENDIAN "ReactionWheel Manager SEND HK TELEMETRY Command"
+    # CMD Primary Header
+    APPEND_ID_PARAMETER    STREAM_ID   16   UINT   0x18C9      0x18C9      0x18C9      "Packet Identification"
+        FORMAT_STRING "0x%04X"
+    APPEND_PARAMETER       SEQUENCE    16   UINT   MIN_UINT16  MAX_UINT16  0xC000      "Packet Sequence"
+        FORMAT_STRING "0x%04X"
+    APPEND_PARAMETER       PKT_LEN     16   UINT   0x0001      0x0001      0x0001      "Packet length"
+    # CMD Secondary Header
+    APPEND_PARAMETER       CMD_ID       8   UINT   4           4           4           "Function Code"
+    APPEND_PARAMETER       CHECKSUM     8   UINT   MIN_UINT8   MAX_UINT8   MIN_UINT8   "Checksum"
+
+COMMAND CFS REACTION_WHEEL_MANAGER_CONTROL_REQUEST_SPEED BIG_ENDIAN "ReactionWheel Manager SEND HK TELEMETRY Command"
+    # CMD Primary Header
+    APPEND_ID_PARAMETER    STREAM_ID   16   UINT   0x18C9      0x18C9      0x18C9      "Packet Identification"
+        FORMAT_STRING "0x%04X"
+    APPEND_PARAMETER       SEQUENCE    16   UINT   MIN_UINT16  MAX_UINT16  0xC000      "Packet Sequence"
+        FORMAT_STRING "0x%04X"
+    APPEND_PARAMETER       PKT_LEN     16   UINT   0x0001      0x0001      0x0001      "Packet length"
+    # CMD Secondary Header
+    APPEND_PARAMETER       CMD_ID       8   UINT   5           5           5           "Function Code"
+    APPEND_PARAMETER       CHECKSUM     8   UINT   MIN_UINT8   MAX_UINT8   MIN_UINT8   "Checksum"
+
+COMMAND CFS REACTION_WHEEL_MANAGER_SET_MAX_TORQUE BIG_ENDIAN "ReactionWheel Manager SEND HK TELEMETRY Command"
+    # CMD Primary Header
+    APPEND_ID_PARAMETER    STREAM_ID   16   UINT   0x18C9      0x18C9      0x18C9      "Packet Identification"
+        FORMAT_STRING "0x%04X"
+    APPEND_PARAMETER       SEQUENCE    16   UINT   MIN_UINT16  MAX_UINT16  0xC000      "Packet Sequence"
+        FORMAT_STRING "0x%04X"
+    APPEND_PARAMETER       PKT_LEN     16   UINT   0x0001      0x0001      0x0001      "Packet length"
+    # CMD Secondary Header
+    APPEND_PARAMETER       CMD_ID       8   UINT   6           6           6           "Function Code"
+    APPEND_PARAMETER       CHECKSUM     8   UINT   MIN_UINT8   MAX_UINT8   MIN_UINT8   "Checksum"
+
+COMMAND CFS REACTION_WHEEL_MANAGER_SEND_TELEMETRY BIG_ENDIAN "ReactionWheel Manager SEND HK TELEMETRY Command"
+    # CMD Primary Header
+    APPEND_ID_PARAMETER    STREAM_ID   16   UINT   0x18C9      0x18C9      0x18C9      "Packet Identification"
+        FORMAT_STRING "0x%04X"
+    APPEND_PARAMETER       SEQUENCE    16   UINT   MIN_UINT16  MAX_UINT16  0xC000      "Packet Sequence"
+        FORMAT_STRING "0x%04X"
+    APPEND_PARAMETER       PKT_LEN     16   UINT   0x0001      0x0001      0x0001      "Packet length"
+    # CMD Secondary Header
+    APPEND_PARAMETER       CMD_ID       8   UINT   7           7           7           "Function Code"
+    APPEND_PARAMETER       CHECKSUM     8   UINT   MIN_UINT8   MAX_UINT8   MIN_UINT8   "Checksum"
