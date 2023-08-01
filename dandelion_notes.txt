@@ -1,0 +1,19 @@
+CAN trans device: MCP2557FD/8FD
+CAN controller device: MCP2557FD/8FD
+
+They have validated payload against identical payload acting as the controller 
+
+ISOTP built they selves
+
+CAN library ?
+
+  Oscope signals looked good, bus voltage 2.5V
+    
+PCAN view:
+  - Observed canbus traffic
+  - Unable to find the correct bitrates to decode information
+
+  - CANFD Tried: 500k/2M, 1M/2M, 500k/5M, 1M/5M
+  - CAN: 500k, 1M
+
+  - asked them to turn on bit rate switch, this did not help
